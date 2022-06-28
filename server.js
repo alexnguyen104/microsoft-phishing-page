@@ -1,5 +1,4 @@
 const express = require("express")
-const req = require("express/lib/request")
 const path = require("path")
 const app = express()
 let port = process.env.PORT || 8080
@@ -10,7 +9,6 @@ app.get("/",function(req,res){
 })
 app.use(express.json())
 app.post("/data", function(req,res){
-    let data = req.body
     let gmail = req.body.GMAIL
     let password = req.body.PASSWORD
     FgBlack = "\x1b[30m"
